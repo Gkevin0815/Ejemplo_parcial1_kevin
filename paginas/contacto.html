@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Banco de Bogotá - Contacto</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+	<div class="container">
+
+		<header>
+			<p style="text-align: center;">
+				<a href="../index.html"><img src="../imagenes/boton_inicio.png"  width="40"></a>
+				<a href="../paginas/servicios.html"><img src="../imagenes/boton_servicios.png"  width="40"></a>
+				<a href="../paginas/contacto.html"><img src="../imagenes/boton_contacto.png"  width="40"></a>
+			</p>
+		</header>
+
+		<main>
+			<h1>Contacto</h1>
+			<p>📞 Teléfono: +57 300 1235 456</p>
+			<p>📧 Email: contacto@bancobogota.com</p>
+
+			<form id="contact-form">
+				<label>Asunto:<br><input type="text" name="subject" required></label><br><br>
+				<label>Nombre:<br><input type="text" name="user_name" required></label><br><br>
+				<label>Email:<br><input type="email" name="user_email" required></label><br><br>
+				<label>Mensaje:<br><textarea name="message" rows="4" required></textarea></label><br><br>
+				<button type="submit">Enviar</button>
+			</form>
+
+			<p id="resultado" style="text-align:center; font-weight:bold; color:green;"></p>
+		</main>
+
+		<footer>
+			<p style="text-align:center;">Página realizada solo para fines educativos &copy; 2025 Kevin Guevara</p>
+			<p style="text-align:center;">
+				<a href="#"><img src="../imagenes/boton_facebook.png"  width="40"></a>
+				<a href="#"><img src="../imagenes/boton_pinteres.png"  width="40"></a>
+				<a href="#"><img src="../imagenes/boton_instagram.png"  width="40"></a>
+			</p>
+		</footer>
+
+	</div>
+
+	<script>
+		// Inicia EmailJS
+		(function(){
+			emailjs.init("UiWcxoX33zUiOczXs");
+		})();
+
+		// Manejo del formulario
+		document.getElementById('contact-form').addEventListener('submit', function(e) {
+			e.preventDefault();
+
+			emailjs.sendForm('service_d9e22xn', 'template_2dqc2fw', this)
+				.then(() => {
+					document.getElementById("resultado").innerText = "✅ Mensaje enviado con éxito!";
+					this.reset();
+				})
+				.catch((err) => {
+					document.getElementById("resultado").style.color = "red";
+					document.getElementById("resultado").innerText = "❌ Error: " + JSON.stringify(err);
+				});
+		});
+	</script>
+</body>
+</html>
