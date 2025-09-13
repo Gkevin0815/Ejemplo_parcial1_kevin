@@ -3,8 +3,9 @@
 }
 body{
 	background: #F7F5F5;
-} 
-.container{
+}
+
+.container1, .container2, .container3 {
 	width: 80%;
 	margin: auto;
 }
@@ -42,9 +43,24 @@ main {
 footer {
 	background-color: black;
 	color: white;
-	padding: 20px;
+	
 }
 
 footer a {
 	text-decoration: none;
+}
+
+form {
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}
+
+.seccion_imagen_servicios img {
+    max-width: 100%;
+    height: auto;
+    display: block;   
+    margin: 0 auto;
 }

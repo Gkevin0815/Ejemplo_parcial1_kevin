@@ -17,3 +17,18 @@ emailjs.sendForm('service_d9e22xn', 'template_2dqc2fw', this)
 		document.getElementById("resultado").innerText = "❌ Error: " + JSON.stringify(err);
 	});
 });
+
+// Manejo de solo números positivos
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("soloPositivos");
+
+  if (input) {
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "-" || e.key === "e") {
+        e.preventDefault(); // bloquea negativos y notación científica
+      }
+    });
+  } else {
+    console.error("No se encontró el input con id 'soloPositivos'");
+  }
+});

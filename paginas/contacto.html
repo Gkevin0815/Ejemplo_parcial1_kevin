@@ -9,7 +9,8 @@
 	<script src="../js/contacto.js" defer></script>
 </head>
 <body>
-	<div class="container">
+
+	<div class="container2">
 
 		<header>
 			<p style="text-align: center;">
@@ -20,15 +21,18 @@
 		</header>
 
 		<main>
-			<h1>Contacto</h1>
-			<p>📞 Teléfono: +57 300 1235 456</p>
+			<h1>Contactos</h1>
+			<p>📞 Teléfono: +57 318 281 4679</p>
 			<p>📧 Email: contacto@bancobogota.com</p>
 
-			<form id="contact-form">
+			<form id ="contact-form">
+				<label>CC: <input type="number" id="soloPositivos" name="cc" min="0" required></label><br><br>
+				<label>Nombres:<br><input type="text" name="name" required></label><br><br>
+				<label>Apellidos:<br><input type="text" name="last_name" required></label><br><br>
 				<label>Asunto:<br><input type="text" name="subject" required></label><br><br>
-				<label>Nombre:<br><input type="text" name="user_name" required></label><br><br>
 				<label>Email:<br><input type="email" name="user_email" required></label><br><br>
-				<label>Mensaje:<br><textarea name="message" rows="4" required></textarea></label><br><br>
+				<label>Usuario:<br><input type="text" name="user" required></label><br><br>
+				<label>Contraseña:<br><input type="password" name="password" required></label><br><br>
 				<button type="submit">Enviar</button>
 			</form>
 
@@ -36,11 +40,11 @@
 		</main>
 
 		<footer>
-			<p style="text-align:center;">Página realizada solo para fines educativos &copy; 2025 Kevin Guevara</p>
+			<p style="text-align:center;">Página realizada solo para fines educativos &copy; 2025 Yesid Gelvez y Kevin Guevara</p>
 			<p style="text-align:center;">
-				<a href="#"><img src="../imagenes/boton_facebook.png"  width="40"></a>
-				<a href="#"><img src="../imagenes/boton_pinteres.png"  width="40"></a>
-				<a href="#"><img src="../imagenes/boton_instagram.png"  width="40"></a>
+				<a href="https://www.facebook.com/BancodeBogota/?utm_source=chatgpt.com" target="_blank"><img src="../imagenes/boton_facebook.png"  width="40"></a>
+				<a href="https://x.com/BancodeBogota?utm_source=chatgpt.com" target="_blank"><img src="../imagenes/twitter.jpg"  width="40"></a>
+				<a href="https://www.instagram.com/bancodebogota/?hl=es" target="_blank"><img src="../imagenes/boton_instagram.png"  width="40"></a>
 			</p>
 		</footer>
 
