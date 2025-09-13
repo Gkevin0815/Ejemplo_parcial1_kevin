@@ -43,7 +43,7 @@ main {
 footer {
 	background-color: black;
 	color: white;
-	
+	padding: 10px;
 }
 
 footer a {
