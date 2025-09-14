@@ -58,7 +58,7 @@ form {
 	}
 }
 
-.seccion_imagen_servicios img {
+.seccion_imagen_servicios, .seccion_imagen_inicio img {
     max-width: 100%;
     height: auto;
     display: block;   
