@@ -7,7 +7,7 @@ body{
 
 .container1, .container2, .container3 {
 	width: 80%;
-	margin: auto;
+	margin: 0 auto;
 }
 
 header {
@@ -19,10 +19,6 @@ header {
 header a{
 	text-decoration: none;
 }
-
-.seccion_imagen img{
-	width: 100%;
-} 
 
 .seccion_noticias {
 	padding: 20px;
@@ -58,9 +54,19 @@ form {
 	}
 }
 
-.seccion_imagen_servicios, .seccion_imagen_inicio img {
+.seccion_imagen_inicio img {
+	max-width: 95%;
+	height: auto;
+	display: block;   
+	margin: 0 auto;
+	padding: 20px;
+}
+
+
+.seccion_imagen_servicios img {
     max-width: 100%;
     height: auto;
     display: block;   
     margin: 0 auto;
+	padding: 10px;
 }
